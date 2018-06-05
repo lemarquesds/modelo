@@ -1,0 +1,16 @@
+%Calcula os eigenvalues e eigenvector para os dados (tratados ou não) mas sem a classificação
+
+%input
+%X=matriz de resultados sem a classificação
+
+%output
+%D=eigenvalues
+%W_pca=eigenvector
+
+function [D, W_pca] = pca(X)
+	Xm = bsxfun(@minus, X, mean(X));
+	C = cov(Xm);
+	[W_pca, D] = eig(C);
+	[D, i] = sort(diag(D), 'descend');
+	W_pca = W_pca(:,i);
+end
