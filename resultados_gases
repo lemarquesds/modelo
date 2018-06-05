@@ -1,0 +1,9 @@
+%% Faz uma matriz apenas dos resultados dos gases;
+
+%input
+%colunas de 1 a 9, referentes aos gases
+
+%output
+%G= matriz de resultados de gases
+
+G=R(:,1:9);
