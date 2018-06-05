@@ -1,0 +1,19 @@
+%% Calcula o teor de água no papel
+%45.49*(teor de agua no oleo(ppm)^0.7156)*(temp da amostra(°C)^-1.373)
+
+%input
+%a=teor de água
+%t=temp da amostra
+
+%output
+%AP=teor de agua no papel (%)
+ a=R(:,10);
+ t=R(:,12);
+ 
+ function AP = teor_agua_papel
+
+   AP=45.49.*((a.^0.7156).*(t.^(-1.373)));
+
+ end
+ 
+ 
