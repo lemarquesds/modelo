@@ -1,0 +1,17 @@
+%Calcula a solubilidade da agua em óleo, por temperatuta. (SD Myers)
+%10^((-1567/(temp amostra+273))+7.0895)
+
+%input
+%t=temperaturas
+
+%output
+%S= matriz com solubilidades
+
+t=R(:,12);
+
+function S = calcula-solubilidade(t)
+
+S = 10.^((-1567./(t.+ 273)).+7.0895);
+ 
+end
+
