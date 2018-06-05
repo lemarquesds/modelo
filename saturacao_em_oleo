@@ -1,0 +1,17 @@
+% Calcula a saturação de água em óleo mineral isolante
+%teor de agua/solubilidade
+
+%input
+%t=teor de agua
+%S=solubilidade
+
+%output
+%AO=saturação de agua no oleo (%)
+
+t=R(:,10);
+
+function saturacao_em_oleo(t,S)
+
+AO = t./S.*100
+
+end
