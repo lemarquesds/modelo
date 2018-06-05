@@ -1,10 +1,13 @@
-%%Carrega os resultados de uma célula do excel (resultados separados por ",") e coloca em uma matriz;
-%precisa carregar o pacote "io" antes; (tem como abrir todos pacotes de uma vez?)
+%%Carrega os resultados de uma planilha do excel e coloca em uma matriz;
+%os resultados devem estar na seguinte onrdem:
+%H2, CH4, C2H6, C2H4, C2H2, CO, CO2, O2,N2, H2O, RD, TEMP DA AMOSTRA
+%a planilha nao deve conter cabeçalhos
+%precisa carregar o pacote "io" antes %(tem como abrir todos pacotes de uma vez?)
+
 %input:
 %"nome_do_arquivo.xlsx" = arquivo com os dados 
 
 %output:
-%R= matriz de dados
-
+%R= matriz de dados na ordem correta
 
 R = xlsread("nome_do_arquivo.xlsx",",");
