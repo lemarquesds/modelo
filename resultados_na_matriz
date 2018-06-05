@@ -1,0 +1,3 @@
+%%Carrega os resultados de uma tabela do excel e coloca em uma matriz
+
+R = dlmread("nome_do_arquivo.csv",",");
