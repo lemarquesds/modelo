@@ -1,3 +1,10 @@
-%%Carrega os resultados de uma tabela do excel e coloca em uma matriz
+%%Carrega os resultados de uma célula do excel (resultados separados por ",") e coloca em uma matriz;
+%precisa carregar o pacote "io" antes; (tem como abrir todos pacotes de uma vez?)
+%input:
+%"nome_do_arquivo.xlsx" = arquivo com os dados 
 
-R = dlmread("nome_do_arquivo.csv",",");
+%output:
+%R= matriz de dados
+
+
+R = xlsread("nome_do_arquivo.xlsx",",");
