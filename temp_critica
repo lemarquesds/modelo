@@ -1,0 +1,18 @@
+%Calcula a temperatura critica de formação de bolhas
+ %=(6996.7/(22.454+(1.4495*LN(AP))-LN(p)))-((EXP(0.473*AP))*((TG/30)^1.585))
+
+%input
+%AP=teor de agua no papel (%)
+%p=pressão (760 torr)
+%TG= total de gases (%)
+
+%output
+%TC = temperatura critica de formação de bolhas (°C)
+
+p=760
+
+function TC = temp_crtica(AP, p,TG)
+
+TC = (6996.7/(22.454+(1.4495*log(AP))-log(p)))-((exp(0.473*AP))*((TG/30)^1.585))
+
+end
